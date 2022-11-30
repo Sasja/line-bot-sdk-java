@@ -528,18 +528,20 @@ public class KitchenSinkController {
                 break;
             }
             case "image_carousel": {
-                URI imageUrl = createUri("/static/buttons/1040.jpg");
+                URI catUrl1 = createUri("/static/cat1.webp");
+                URI catUrl2 = createUri("/static/cat2.webp");
+                URI catUrl3 = createUri("/static/cat3.jpeg");
                 ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
                         Arrays.asList(
-                                new ImageCarouselColumn(imageUrl,
+                                new ImageCarouselColumn(catUrl1,
                                                         new URIAction("Goto line.me",
                                                                       URI.create("https://line.me"), null)
                                 ),
-                                new ImageCarouselColumn(imageUrl,
+                                new ImageCarouselColumn(catUrl2,
                                                         new MessageAction("Say message",
                                                                           "Rice=米")
                                 ),
-                                new ImageCarouselColumn(imageUrl,
+                                new ImageCarouselColumn(catUrl3,
                                                         new PostbackAction("言 hello2",
                                                                            "hello こんにちは",
                                                                            "hello こんにちは")
