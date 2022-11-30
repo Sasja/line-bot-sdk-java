@@ -339,7 +339,7 @@ public class KitchenSinkController {
 
     private void handleTextContent(String replyToken, Event event, TextMessageContent content)
             throws Exception {
-        final String text = content.getText();
+        final String text = content.getText().toLowerCase();
 
         log.info("Got text message from replyToken:{}: text:{} emojis:{}", replyToken, text,
                  content.getEmojis());
