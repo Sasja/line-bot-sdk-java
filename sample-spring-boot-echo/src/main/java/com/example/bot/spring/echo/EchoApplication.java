@@ -42,12 +42,10 @@ public class EchoApplication {
     public Message handleTextMessageEvent(MessageEvent<TextMessageContent> event) {
         log.info("event: " + event);
         final String originalMessageText = event.getMessage().getText();
-        if(originalMessageText.equals("最漂亮的人"))
+        if(originalMessageText.contains("最漂亮的人"))
         {
             return new TextMessage("就是你啊！");
-        }
-        else
-        {
+        } else {
             return new TextMessage("嗯");
         }
     }
