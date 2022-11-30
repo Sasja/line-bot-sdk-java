@@ -453,7 +453,7 @@ public class KitchenSinkController {
                 break;
             }
             case "buttons": {
-                URI imageUrl = createUri("/static/icon/cat.jpg");
+                URI imageUrl = createUri("/static/icon/cat.png");
                 ButtonsTemplate buttonsTemplate = new ButtonsTemplate(
                         imageUrl,
                         "My button sample",
